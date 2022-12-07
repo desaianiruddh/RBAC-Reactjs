@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "username": "Ani",
+    "status": "super"
+  },
+  {
+    "id": 2,
+    "username": "Kishan",
+    "status": "admin"
+  },
+  {
+    "id": 3,
+    "username": "Deep",
+    "status": "manager"
+  },
+  {
+    "id": 4,
+    "username": "Akash",
+    "status": "admin"
+  },
+  {
+    "id": 5,
+    "username": "Ravi",
+    "status": "user"
+  },
+  {
+    "id": 7,
+    "username": "Abhishek",
+    "status": "user"
+  }
+]
