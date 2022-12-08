@@ -1,32 +1,32 @@
 [
   {
     "id": 1,
-    "username": "Ani",
+    "username": "ani",
     "status": "super"
   },
   {
     "id": 2,
-    "username": "Kishan",
+    "username": "kishan",
     "status": "admin"
   },
   {
     "id": 3,
-    "username": "Deep",
+    "username": "deep",
     "status": "manager"
   },
   {
     "id": 4,
-    "username": "Akash",
+    "username": "akash",
     "status": "admin"
   },
   {
     "id": 5,
-    "username": "Ravi",
+    "username": "ravi",
     "status": "user"
   },
   {
     "id": 7,
-    "username": "Abhishek",
+    "username": "abhishek",
     "status": "user"
   }
 ]
