@@ -1,19 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { login } from '../redux/userSlice';
 
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
+  const { userData } = useSelector((state) => state.user);
   const [userRole, setUserRole] = useState('');
-
+  //if there's user already logged in redirect to home
+  useEffect(() => {
+    if (userData.username) {
+      navigate('/home');
+    }
+  }, [userData, navigate]);
+  //login event
   const userLogin = (e) => {
     e.preventDefault();
     dispatch(login(userRole));
-    navigate('/');
+    navigate('/home');
   };
   return (
     <div>

@@ -1,19 +1,22 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 import Login from './pages/Login';
 import PageNotFound from './pages/PageNotFound';
 import { routePaths } from './routePaths';
+import Index from './pages/Index';
 
-const Router = ({ userRole }) => {
-  // const [routePath, setRoutePath] = useState([])
-  console.log(userRole);
+const Router = () => {
+  const { userData } = useSelector((state) => state.user);
+  const { username, status } = userData;
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Index />} />
         <Route path="/login" element={<Login />} />
-        {userRole &&
-          routePaths(userRole).map((route, index) => {
-            console.log('route', route);
+        {username &&
+          routePaths(status).map((route, index) => {
             const { path, component: Component, exact } = route;
             return (
               <Route
